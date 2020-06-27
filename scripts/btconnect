@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+modprobe btusb
+systemctl start bluetooth.service
+bluetoothctl power on
+bluetoothctl agent on
+bluetoothctl scan on
+bluetoothctl devices 
+#btuetoothctl connect

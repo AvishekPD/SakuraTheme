@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+		SCRIPT_FOLDER="$HOME/scripts"
+		SCRIPT_FILE="$SCRIPT_FOLDER/$1"
+
+		if [[ -f $SCRIPT_FILE ]]; then
+			micro $SCRIPT_FILE
+		else
+			echo '#!/bin/zsh' > $SCRIPT_FILE
+			chmod +x $SCRIPT_FILE
+			micro $SCRIPT_FILE
+		fi

@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+text="$@"
+cols=$(tput cols) && rows=$(tput lines)
+clear
+y=$((($cols-${#text})/2)) && x=$((($rows)/2))
+tput clear 
+tput cup $x $y
+echo -e "\e[93m${text}"

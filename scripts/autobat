@@ -1,0 +1,3 @@
+#!/bin/zsh
+i3-msg "workspace 9 ; append_layout ~/.config/i3/workspace-9.json"
+kitty --hold sh -c /home/smrg/scripts/checkbat

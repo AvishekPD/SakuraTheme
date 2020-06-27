@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+#Terminate polbar in Bg
+killall -q polybar
+
+#wait for the process to finish
+while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+
+#launch Polybar
+polybar generic-bar -r &

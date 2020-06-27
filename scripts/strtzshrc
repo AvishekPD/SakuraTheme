@@ -1,0 +1,18 @@
+#!/bin/zsh
+sh ctext Hello Smrg!!!
+sleep 0.77
+clear
+term=`echo $TERM`
+curr=xterm-kitty
+classic=linux
+if [ $term = $curr ] 
+	then
+		tty-clock -SDcC 6
+		neofetch --size 255px
+		sleep 0.75
+elif [ $term = $classic ]
+		then
+			echo "Welcome to Dark Side!" 
+else 
+		echo Welcome to VsCode!
+fi 
